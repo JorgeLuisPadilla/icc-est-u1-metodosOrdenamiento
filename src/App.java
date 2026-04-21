@@ -1,16 +1,19 @@
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        metodoBurbuja();
+        // runBurbuja();
+        runMetodoBurbujaAvanzado();
+
     }
-    public static void metodoBurbuja() {
-        System.out.println("Método burbuja");
-        int[] arreglo = new int[]{10, -5, 0, 2, 7};
-        MetodoBurbuja metodoBurbuja = new MetodoBurbuja(arreglo);
-        metodoBurbuja.imprimirArreglo();
-        metodoBurbuja.ordenarAscendente();
-        metodoBurbuja.imprimirArreglo();
-        metodoBurbuja.imprimirArreglo();
-        metodoBurbuja.ordenarDescendente();
-        metodoBurbuja.imprimirArreglo();
+    
+    public static void runMetodoBurbujaAvanzado() {
+        int[] arreglo = {50, 5, 20, 30, 0, -10, 15};
+        MetodoBurbujaAvanzado mBurbujaAvanzado = new MetodoBurbujaAvanzado(arreglo);
+        System.out.println(Arrays.toString(arreglo));
+        mBurbujaAvanzado.sort(true);
+        System.out.println(Arrays.toString(arreglo));
+        mBurbujaAvanzado.sort(false);
+        System.out.println(Arrays.toString(arreglo));
     }
 }
